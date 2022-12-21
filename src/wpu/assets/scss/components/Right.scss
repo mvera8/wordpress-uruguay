@@ -1,0 +1,15 @@
+@import '../variables';
+
+.bg-before-light-primary {
+  &:before {
+    background-color: $light-primary;
+    content: '';
+		display: block;
+    height: 85%;
+    left: 0;
+    position: absolute;
+    top: 0;
+		width: 100%;
+    z-index: -1;
+  }
+}

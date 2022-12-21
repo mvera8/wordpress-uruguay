@@ -1,0 +1,19 @@
+@mixin primary() {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+}
+
+@mixin secondary() {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin secondaryMedium() {
+  font-family: 'DM Sans Medium', sans-serif;
+  font-weight: 500;
+}
+
+@mixin secondaryBold() {
+  font-family: 'DM Sans Bold', sans-serif;
+  font-weight: 700;
+}

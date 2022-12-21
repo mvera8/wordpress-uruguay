@@ -1,0 +1,28 @@
+@import '../base';
+@import '../variables';
+@import '../bootstrap-init';
+
+.navbar {
+  &-brand {
+    position: relative;
+  }
+
+  &-logo {
+    width: 11rem;
+  }
+
+  &-nav {
+    .nav-item {
+      .nav-link {
+				@include secondaryBold();
+
+        padding: 0.5rem;
+				margin-left: 1rem;
+
+				&.active {
+					color: $primary;
+				}
+      }
+    }
+  }
+}

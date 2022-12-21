@@ -1,0 +1,35 @@
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+	@include secondary();
+
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  @include primary();
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+h4,
+h5 {
+  @include secondaryBold();
+}
+
+h3,
+h4 {
+	line-height: 1.4;
+}
+
+strong,
+b {
+  @include secondaryBold();
+}
