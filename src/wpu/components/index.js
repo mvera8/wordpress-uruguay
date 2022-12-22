@@ -13,6 +13,7 @@ export * from './HeroAbout';
 export * from './Latest';
 export * from './Left';
 export * from './Links';
+export * from './Loader';
 export * from './LinkCard';
 export * from './Navbar';
 export * from './Pagination';
