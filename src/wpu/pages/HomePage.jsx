@@ -1,5 +1,5 @@
 import React from 'react'
-import { Categories, Hero, Latest, Left, Links, Right, Subscribe } from '../components';
+import { Categories, Hero, Latest, Left, Links, Right, Spinner, Subscribe } from '../components';
 
 export const HomePage = () => {
 	return (

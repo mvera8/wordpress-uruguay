@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { BlogPage, HomePage, SinglePage, NoMatchPage, AboutPage, ContactPage, PrivacidadPage } from "../pages"
+import { BlogPage, HomePage, SinglePage, NoMatchPage, AboutPage, ContactPage, PrivacidadPage, CategoryPage, CategoriesPage } from "../pages"
 import { Footer, Navbar } from "../components"
 
 export const SiteRouter = () => {
@@ -14,6 +14,8 @@ export const SiteRouter = () => {
 				<Route path="blog/:id" element={<SinglePage />} />
 				<Route path="contact" element={<ContactPage />} />
 				<Route path="privacidad" element={<PrivacidadPage />} />
+				<Route path="category" element={<CategoriesPage />} />
+				<Route path="category/:id" element={<CategoryPage />} />
 				<Route path="*" element={<NoMatchPage />} />
 			</Routes>
 

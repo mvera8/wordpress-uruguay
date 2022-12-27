@@ -1,5 +1,7 @@
 export * from './AboutPage';
 export * from './BlogPage';
+export * from './CategoriesPage';
+export * from './CategoryPage';
 export * from './ContactPage';
 export * from './HomePage';
 export * from './NoMatchPage';
