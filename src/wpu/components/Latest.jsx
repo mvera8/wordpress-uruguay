@@ -1,19 +1,29 @@
 import { useAxiosLoop } from '../../hooks/useAxiosLoop';
-import { Spinner } from './Spinner';
 import { PostCard } from './PostCard';
+import { PostCardSkeleton } from './PostCardSkeleton';
 
 export const Latest = () => {
 
 	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/posts?per_page=3` );
 
 	return (
-		<section className="section section-blog pb-5">
+		<section id='Latest' className="section section-blog pb-5">
 			<div className="container">
 				<h2 className="pb-5 mb-0">Latest from the <span className="text-primary">blog</span></h2>
 				<div className="row">
 
-					{loading && (
-						<Spinner />
+					{!loading && (
+						<>
+							<div className="col-12 col-md-4 d-flex">
+								<PostCardSkeleton />
+							</div>
+							<div className="col-12 col-md-4 d-flex">
+								<PostCardSkeleton />
+							</div>
+							<div className="col-12 col-md-4 d-flex">
+								<PostCardSkeleton />
+							</div>
+						</>
 					)}
 
 					{posts.map( ( post, index ) => {

@@ -1,19 +1,25 @@
+import { useState } from 'react';
+
 import heroImage from '../assets/images/hero_image.svg';
 import cloudRight from '../assets/images/cloud_right.svg';
 import cloudLeft from '../assets/images/cloud_left.svg';
+import { pages } from '../data/pages.json'
 
 import '../assets/scss/components/Hero.scss';
 
 export const Hero = () => {
+
+	const [subtitle, setsubtitle] = useState(pages[0].home[0].subtitle);
+	
 	return (
 		<section className="hero bg-light-primary py-5">
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-12 col-md-5">
-						<h1 className="mb-5 display-1 hero__title">Comunidad Uruguaya de <span className='text-primary'>WordPress.</span></h1>
-						<p className="lead mb-5 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lacinia orci.</p>
+						<h1 className="mb-3 display-1 hero__title">Comunidad Uruguaya de <span className='text-primary'>WordPress.</span></h1>
+						<p className="lead mb-5 text-muted">{subtitle}</p>
 						<p>
-							<a href="#" className="btn btn-primary btn-lg text-white">Get Started</a>
+							<a href="#Latest" className="btn btn-primary btn-lg text-white">Get Started</a>
 						</p>
 					</div>
 					<div className="col-12 col-md-6 offset-md-1">

@@ -1,4 +1,10 @@
-export const HeroAbout = ({ title }) => {
+import { useState } from 'react';
+import { pages } from '../data/pages.json'
+
+export const HeaderAbout = ({ title }) => {
+
+	const [subtitle, setsubtitle] = useState(pages[0].nosotros[0].subtitle);
+
 	return (
 		<div className='py-5 bg-light-warning text-center'>
 			<div className='container'>
@@ -13,7 +19,7 @@ export const HeroAbout = ({ title }) => {
 				</div>
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-4">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis non accumsan in, tempor dictum neque.</p>
+						<p>{subtitle}</p>
 					</div>
 				</div>
 			</div>
