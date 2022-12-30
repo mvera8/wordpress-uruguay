@@ -76,7 +76,7 @@ $link-color: $black;
 $link-hover-color: $primary;
 
 // Navbar
-$navbar-padding-y: 1rem;
+$navbar-padding-y: 0.6rem;
 
 // Shadow
 $box-shadow: 0 0.2rem 4rem 0 rgba(0, 0, 0, 0.07);
@@ -85,7 +85,12 @@ $box-shadow-sm: 0 0.1rem 0.3rem rgba(3, 0, 71, 0.09);
 // Tipography
 $font-size-root: 16px;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$line-height-base: 1.6;
+$line-height-base: 1.4;
+
+$headings-font-style: normal;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$display-line-height: 1.1;
 
 $display-font-sizes: (
 	1: 5rem,

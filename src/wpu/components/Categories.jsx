@@ -3,7 +3,7 @@ import { CategoryCard } from "./CategoryCard"
 
 export const Categories = () => {
 
-	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/categories` );
+	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/categories?categories_exclude=1` );
 
 	return (
 		<section className="section-categories py-5">

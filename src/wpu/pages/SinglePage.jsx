@@ -9,7 +9,7 @@ export const SinglePage = () => {
 
 	return (
 		<>
-			{loading && (
+			{!loading && (
 				<Spinner />
 			)}
 

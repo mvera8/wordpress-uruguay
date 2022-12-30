@@ -1,0 +1,19 @@
+{
+	"pages": [
+		{
+			"home": [
+				{
+					"subtitle": "Pensamos que Wordpress Uruguay es un espacio creado y en desarrollo para Developers, donde la idea es ayudarse, promocionarse y empoderarse entre todos.",
+					"hero_button": "Get Started",
+					"first_right_title": "Descubre lo mejor de WordPress.",
+					"first_right_text": "Hola."
+				}
+			],
+			"nosotros": [
+				{
+					"subtitle": "Pensamos que Wordpress Uruguay es un espacio creado y en desarrollo para Developers, donde la idea es ayudarse, promocionarse y empoderarse entre todos."
+				}
+			]
+		}
+	]
+}

@@ -5,7 +5,7 @@ export const useAxiosContent = ( url ) => {
 
     const [title, setTitle] = useState('');
   	const [content, setContent] = useState('');
-    const [loading, setloading] = useState(true);
+    const [loading, setloading] = useState(false);
 
     const getContent = async () => {
       axios.get( url )
@@ -14,7 +14,7 @@ export const useAxiosContent = ( url ) => {
   				setContent(response.data[0].content.rendered);
   				// wp:term.taxonomy
       });
-      setloading(false);
+      setloading(true);
     }
 
     useEffect(() => {

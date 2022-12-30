@@ -2,7 +2,7 @@ import dashboard from '../assets/images/dashboard.webp';
 
 export const Left = () => {
 	return (
-		<section className="section py-5 bg-light-warning mb-5">
+		<section className="section-left py-5 bg-light-warning">
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-12 col-md-5 offset-md-1">
