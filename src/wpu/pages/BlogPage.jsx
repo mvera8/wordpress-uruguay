@@ -1,11 +1,9 @@
-import React from 'react'
 import { useAxiosLoop } from '../../hooks/useAxiosLoop';
 import { HeaderPage, PostCard, PostCardSkeleton } from '../components'
 
 export const BlogPage = () => {
 
 	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/posts` );
-	console.log(posts);
 
 	return (
 		<>

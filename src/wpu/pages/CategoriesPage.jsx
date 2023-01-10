@@ -1,4 +1,3 @@
-import React from 'react'
 import { Categories, HeaderPage } from '../components'
 
 export const CategoriesPage = () => {

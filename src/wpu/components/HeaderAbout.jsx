@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { pages } from '../data/pages.json'
 
-export const HeaderAbout = ({ title }) => {
-
-	const [subtitle, setsubtitle] = useState(pages[0].nosotros[0].subtitle);
+export const HeaderAbout = ({ title, subtitle }) => {
 
 	return (
 		<div className='py-5 bg-light-warning text-center'>

@@ -6,7 +6,7 @@ export const HeaderCategory = ({ title }) => {
 					<div className="col-12 col-md-8">
 						<header className="entry-header">
 							<h1 className="entry-title mb-4">
-								<span>category:</span> {title}
+								<span className='h3'>category:</span> {title}
 							</h1>
 						</header>
 					</div>

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useAxiosContent } from '../../hooks/useAxiosContent';
-import { Content, HeaderSingle, Spinner } from '../components';
+import { Content, HeaderSingle, Latest, Spinner } from '../components';
 
 export const SinglePage = () => {
 
@@ -19,6 +19,8 @@ export const SinglePage = () => {
 			<Content
 				content={content}
 			/>
+
+			<Latest />
 		</>
 	)
 }

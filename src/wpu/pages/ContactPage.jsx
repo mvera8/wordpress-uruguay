@@ -1,7 +1,10 @@
-import React from 'react'
+import { HeaderPage } from '../components'
 
 export const ContactPage = () => {
 	return (
-		<div>ContactPage</div>
+		<>
+			<HeaderPage title="Contacto" />
+
+		</>
 	)
 }
