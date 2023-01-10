@@ -1,5 +1,5 @@
 
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { LinkCard } from './LinkCard';
 
 export const Links = () => {
@@ -22,7 +22,7 @@ export const Links = () => {
 							text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec varius augue. Fusce dictum rhoncus urna, a eleifend nisi tincidunt non. In commodo fermentum arcu et gravida."
 							buttonText="Follow Us"
 							buttonLink="#"
-							icon={faFacebook}
+							icon={faInstagram}
 						/>
 					</div>
 				</div>

@@ -1,13 +1,13 @@
 import dashboard from '../assets/images/dashboard.webp';
 
-export const Left = () => {
+export const Left = ({ title, text}) => {
 	return (
 		<section className="section-left py-5 bg-light-warning">
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-12 col-md-5 offset-md-1">
-						<h3 className='mb-3'>Take your project to te next level.</h3>
-						<p className='text-muted'>Soy Martín y amo WordPress desde el día que lo conoci, por el 2012 en mi primer trabajo.</p>
+						<h3 className='mb-3'>{title}</h3>
+						<p className='text-muted'>{text}</p>
 					</div>
 					<div className="col-12 col-md-5">
 						<div className='py-5'>

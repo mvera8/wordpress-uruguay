@@ -5,7 +5,7 @@ export const HeaderPage = ({ title }) => {
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-8">
 						<header className="entry-header">
-							<h1 className="entry-title mb-4">
+							<h1 className="entry-title">
 								{title}
 							</h1>
 						</header>

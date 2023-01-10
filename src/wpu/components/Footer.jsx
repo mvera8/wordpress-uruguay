@@ -1,11 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+
+import '../assets/scss/components/Footer.scss';
 
 export const Footer = () => {
 	return (
-		<footer className="text-center">
+		<footer className="text-center footer">
 			<div className="container">
+				<section>
+					<div className='container pb-4'>
+						<Link to="/">
+							<img className='footer__logo' src="/wpu.svg" alt="WordPress Uruguay" />
+						</Link>
+					</div>
+				</section>
 				<section>
 					<div className="row text-center d-flex justify-content-center">
 						<div className="col-md-2">

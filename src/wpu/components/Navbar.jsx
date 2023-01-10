@@ -39,7 +39,7 @@ export const Navbar = () => {
 						</li>
 
 						<li className="nav-item">
-							<a className="nav-link" href="https://www.facebook.com/groups/162652044298342" target="_blank">
+							<a className="nav-link ms-1" href="https://www.facebook.com/groups/162652044298342" target="_blank">
 								<FontAwesomeIcon icon={faFacebook} size="lg" />
 							</a>
 						</li>

@@ -1,15 +1,21 @@
+@import '../base';
 @import '../variables';
+@import '../bootstrap-init';
 
 .bg-before-light-primary {
   &:before {
-    background-color: $light-primary;
-    content: '';
-		display: block;
-    height: 85%;
-    left: 0;
-    position: absolute;
-    top: 0;
-		width: 100%;
-    z-index: -1;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      background-color: $light-primary;
+      content: '';
+      display: block;
+      height: 85%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
   }
 }
