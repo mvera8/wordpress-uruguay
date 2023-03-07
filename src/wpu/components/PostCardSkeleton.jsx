@@ -6,7 +6,7 @@ export const PostCardSkeleton = () => {
 				<h5 className="card-title mb-3 placeholder-glow">
 					<span className="placeholder col-10"></span>
 				</h5>
-				<div className="badge bg-light-primary text-primary py-2 px-3 rounded placeholder-glow">
+				<div className="badge bg-light-warning text-primary py-2 px-3 rounded placeholder-glow">
 					<span className="placeholder col-5"></span>
 				</div>
 				<div className="card-text mb-3 placeholder-glow">

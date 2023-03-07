@@ -6,7 +6,7 @@ export const CategoryPost = ({ category }) => {
 			<NavLink
 				className="text-decoration-none"
 				to={'/category/' + category.toLowerCase()}>
-					<span className="badge bg-light-primary text-primary py-2 px-3 rounded">{category}</span>
+					<span className="badge rounded-pill bg-light-primary text-primary">{category}</span>
 			</NavLink>
 		</div>
 	)

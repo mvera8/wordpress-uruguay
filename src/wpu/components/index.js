@@ -20,6 +20,6 @@ export * from './Pagination';
 export * from './PostCard';
 export * from './PostCardSkeleton';
 export * from './Right';
-export * from './Share';
 export * from './Spinner';
 export * from './Subscribe';
+export * from './TweetShare';

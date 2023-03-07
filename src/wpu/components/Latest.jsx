@@ -3,9 +3,11 @@ import { PostCard } from './PostCard';
 import { PostCardSkeleton } from './PostCardSkeleton';
 import { NavLink } from 'react-router-dom';
 
+const blogdomain = import.meta.env.VITE_BLOG_DOMAIN;
+
 export const Latest = ({ more }) => {
 
-	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/posts?per_page=3` );
+	const { posts, loading } = useAxiosLoop( `${blogdomain}/wp-json/wp/v2/posts?per_page=3` );
 
 	return (
 		<section id='Latest' className="section section-blog pb-5">
@@ -15,33 +17,29 @@ export const Latest = ({ more }) => {
 					: ( <h3 className="pb-5 mb-0">Latest from the <span className="text-primary">blog</span></h3> )
 				}
 				<div className="row pb-5"> 
-
-					{!loading && (
-						<>
-							<div className="col-12 col-md-4 d-flex">
-								<PostCardSkeleton />
-							</div>
-							<div className="col-12 col-md-4 d-flex">
-								<PostCardSkeleton />
-							</div>
-							<div className="col-12 col-md-4 d-flex">
-								<PostCardSkeleton />
-							</div>
-						</>
-					)}
-
-					{posts.map( ( post, index ) => {
-						return (
-							<div key={ index } className="col-12 col-md-4 d-flex">
-								<PostCard 
-									title={post.title.rendered}
-									excerpt={post.excerpt.rendered}
-									slug={post.slug}
-								/>
-							</div>
+					{loading ? ( <>
+						<div className="col-12 col-md-4 d-flex">
+							<PostCardSkeleton />
+						</div>
+						<div className="col-12 col-md-4 d-flex">
+							<PostCardSkeleton />
+						</div>
+						<div className="col-12 col-md-4 d-flex">
+							<PostCardSkeleton />
+						</div>
+					</> ) : ( <>
+						{posts.map( ( post, index ) => {
+							return (
+								<div key={ index } className="col-12 col-md-4 d-flex">
+									<PostCard 
+										title={post.title.rendered}
+										excerpt={post.excerpt.rendered}
+										slug={post.slug}
+									/>
+								</div>
+							)}
 						)}
-					)}
-
+					</> )}
 				</div>
 
 				{more && (

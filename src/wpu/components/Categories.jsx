@@ -1,9 +1,11 @@
 import { useAxiosLoop } from "../../hooks/useAxiosLoop";
 import { CategoryCard } from "./CategoryCard"
 
+const blogdomain = import.meta.env.VITE_BLOG_DOMAIN;
+
 export const Categories = () => {
 
-	const { posts, loading } = useAxiosLoop( `http://blog.wordpressuruguay.com/wp-json/wp/v2/categories?categories_exclude=1` );
+	const { posts, loading } = useAxiosLoop( `${blogdomain}/wp-json/wp/v2/categories?categories_exclude=1` );
 
 	return (
 		<section className="section-categories py-5">

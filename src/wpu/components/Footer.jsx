@@ -4,6 +4,8 @@ import { NavLink, Link } from 'react-router-dom';
 
 import '../assets/scss/components/Footer.scss';
 
+const sitename = import.meta.env.VITE_SITE_NAME;
+
 export const Footer = () => {
 	return (
 		<footer className="text-center footer">
@@ -11,7 +13,7 @@ export const Footer = () => {
 				<section>
 					<div className='container pb-4'>
 						<Link to="/">
-							<img className='footer__logo' src="/wpu.svg" alt="WordPress Uruguay" />
+							<img className='footer__logo' src="/wpu.svg" alt={sitename} />
 						</Link>
 					</div>
 				</section>
