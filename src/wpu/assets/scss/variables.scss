@@ -38,6 +38,11 @@ $theme-colors: (
 $body-bg: $white;
 $body-color: $black;
 
+// Badge
+$badge-font-size: 0.9rem;
+$badge-font-weight: 400;
+$badge-padding-y: .25em;
+
 // Breadcrumbs
 $breadcrumb-font-size: 1.4rem;
 $breadcrumb-margin-bottom: 0;
@@ -61,15 +66,21 @@ $btn-font-size-lg: 1.7rem;
 $btn-border-radius-lg: 3rem;
 
 // Cards
-$card-border-radius: 0.7rem;
+$card-border-radius: 0.8rem;
+$card-border-width: 0;
 
 // Components
 $border-color: $gray-300;
 $border-radius: 0.7rem;
-
 $container-padding-x: 1.5rem;
-
 $grid-gutter-width: 3rem;
+
+// Forms
+$input-padding-y: 0.6rem;
+$input-padding-x: 1rem;
+$input-font-size: 1rem;
+$input-font-weight: 400;
+$input-line-height: 1.4;
 
 // Links
 $link-color: $black;

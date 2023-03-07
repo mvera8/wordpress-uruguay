@@ -1,4 +1,4 @@
-export const Content = ({ content }) => {
+export const Content = ({ content, tags }) => {
 	return (
 		<div className='py-5'>
 			<div className='container'>

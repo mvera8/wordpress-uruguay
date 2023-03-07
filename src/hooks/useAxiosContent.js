@@ -1,29 +1,56 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-export const useAxiosContent = ( url ) => {
+const blogdomain = import.meta.env.VITE_BLOG_DOMAIN;
+
+export const useAxiosContent = ( postSlug ) => {
 
     const [title, setTitle] = useState('');
   	const [content, setContent] = useState('');
-    const [loading, setloading] = useState(false);
+    const [excerpt, setExcerpt] = useState('');
 
-    const getContent = async () => {
-      axios.get( url )
-  			.then((response) => {
-        	setTitle(response.data[0].title.rendered);
-  				setContent(response.data[0].content.rendered);
-  				// wp:term.taxonomy
-      });
-      setloading(true);
-    }
+    const [categories, setCategories] = useState([]);
+    const [tags, setTags] = useState([]);
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-      getContent();
-    }, [url])
+      setIsLoading(true);
+      setError(null);
+      axios.get( `${blogdomain}/wp-json/wp/v2/posts?slug=${postSlug}` )
+  			.then((response) => {
+        	setTitle(response.data[0].title.rendered);
+          setId(response.data[0].id);
+  				setContent(response.data[0].content.rendered);
+          setExcerpt(response.data[0].excerpt.rendered);
+          setTags(response.data[0].tags);
+          setIsLoading(false);
+
+          return axios.all([
+            axios.get(`${blogdomain}/wp-json/wp/v2/categories?post=${response.data[0].id}`),
+            axios.get(`${blogdomain}/wp-json/wp/v2/tags?post=${response.data[0].id}`)
+          ]);
+        })
+        .then(
+          axios.spread((categoriesResponse, tagsResponse) => {
+            setCategories(categoriesResponse.data);
+            setTags(tagsResponse.data);
+          })
+        )
+        .catch(error => {
+          setError(error);
+          setIsLoading(false);
+        });
+    }, [postSlug]);
+
 
     return {
         title,
         content,
-        loading,
+        categories,
+        tags,
+        excerpt,
+        isLoading,
     };
 }

@@ -9,9 +9,9 @@ export const SiteRouter = () => {
 
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/:id" element={<SinglePage />} />
 				<Route path="about" element={<AboutPage />} />
 				<Route path="blog" element={<BlogPage />} />
-				<Route path="blog/:id" element={<SinglePage />} />
 				<Route path="contact" element={<ContactPage />} />
 				<Route path="privacidad" element={<PrivacidadPage />} />
 				<Route path="category" element={<CategoriesPage />} />
